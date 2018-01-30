@@ -8,7 +8,7 @@ To get the dang thing going, you'll need to get node.js and webpack-dev-server.
 
 ## Node ##
 
-	[node.js download](https://nodejs.org/en/download/)
+[node.js download](https://nodejs.org/en/download/)
 
 ## webpack-dev-server ##
 
