@@ -11,22 +11,22 @@ export default class WorkComp extends React.Component{
       this.projects = [
         {
           title: 'Amatis Controls',
-          secondTitle: 'Shortshort',
-          icon: '../../img/android-icon.png',
+          icon: '../../img/amatis-platforms.png',
           id: 1,
-          desc: 'This App interfaces with the Amatis Controls Lighting system to give the user extremely quick and responsive control over their lighting.'
+          type: 'Design / Front End Development'
         },
         {
           title: 'AML Entertainment',
           icon: '../../img/aml.png',
           id: 2,
-          desc: 'this will be a desc'
+          type: 'Design / Branding / Front End Developemnt'
         },
         {
           title: 'Charles P. Braman Real Estate Appraisals',
-          icon: '../../img/straw.png',
+          icon: '',
           id: 3,
-          desc: 'this will be a desc..'
+          type: 'Design / Branding / Front End Developemnt'
+
         },
       ]
   }
@@ -36,16 +36,19 @@ export default class WorkComp extends React.Component{
 
       const component = this.projects.map((project) =>
 
+        <div className="work-card" key={project.id} id={project.id}>
+          <div className="work-card-img">
+            <img className="work-card-icon" src={project.icon} />
+          </div>
+          <div className="work-card-overlay">
+            <span className="work-card-title">{project.title}</span>
+            <span className="work-card-type">{project.type}</span>
+            <button>View Project <span className="arrow-right">→</span></button>
+          </div>
+
+        </div>
 
 
-      <Paragraph
-        key={project.id}
-        id={project.id}
-        className="paragraph"
-        title={project.title}
-        secondTitle={project.title}
-        text={project.desc}
-      />
 
 
       )
