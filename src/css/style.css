@@ -1,0 +1,425 @@
+/* line 17, ../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/*#ffd456*/
+
+html {
+
+    font-family: "adriane", Georgia, serif;
+    color: #494C4E;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    border: 8px solid #494C4E;
+    margin: 0px;
+}
+
+#app, #wrap {
+
+    box-sizing: border-box;
+    color: #4a4c4e;
+    background: white;
+    overflow: scroll;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: #4a4c4e;
+  position: relative;
+}
+
+.imageloader.imageloader-loaded {
+    text-align: center;
+}
+
+
+
+
+
+
+
+/*        &HEADER        */
+
+header#app-header {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* position: absolute; */
+    background: white;
+    z-index: 50;
+    padding: 10px 5%;
+    box-sizing: border-box;
+}
+
+header#app-header h1 {
+    font-weight: 100;
+    text-transform: lowercase;
+    font-size: 30px;
+    color: #4a4c4e;
+    display: flex;
+    top: 10px;
+    position: relative;
+    border: 3px solid #4a4c4e;
+    padding: 10px;
+    border-radius: 7px;
+    justify-content: stretch;
+}
+/*        &NAV       */
+
+div#main-nav-container {
+    margin: auto 0;
+}
+
+nav#nav-list {
+  margin: auto;
+}
+
+
+
+nav#nav-list ul {
+    list-style: none;
+}
+
+nav#nav-list ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+nav#nav-list ul li a:before, .active-nav {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f9bd09;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+nav#nav-list ul li a:hover:before, nav#nav-list ul li a:active:before, .active-nav {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+img#logo {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+/*        &MOBILE NAV        */
+
+
+#mobile-nav-container {
+    margin: auto 0;
+}
+
+nav#mobile-nav-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .75);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    display: none;
+}
+
+nav#mobile-nav-list.open {
+    display: flex;
+    justify-content: center;
+}
+
+nav#mobile-nav-list ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav#mobile-nav-list ul li {
+  font-size: 15vw;
+  margin-top: 100px;
+}
+
+
+
+nav#mobile-nav-list ul li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+    /*    &NAV ICON       */
+
+
+    #nav-icon {
+        width: 44px;
+        height: 24px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        top: 8px;
+        z-index: 99;
+    }
+
+    #nav-icon span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #4a4c4e;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+  }
+
+
+
+    #nav-icon span:nth-child(1) {
+        top: 0px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+
+    #nav-icon span:nth-child(2) {
+        top: 10px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+
+    #nav-icon span:nth-child(3) {
+        top: 20px;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -o-transform-origin: left center;
+        transform-origin: left center;
+    }
+
+    #nav-icon.open span:nth-child(1) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: -5px;
+      left: 0px;
+      width: 35px;
+  }
+
+    #nav-icon.open span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    #nav-icon.open span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 20px;
+      left: 0px;
+      width: 35px;
+  }
+
+
+/*        &Home      */
+
+
+
+#home {
+    background-image: url(/../img/thom_and_i.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right,#000000,#000000);
+    opacity: .5;
+}
+
+
+div.paragraph {
+  box-sizing: border-box;
+  padding: 45px 25% 0px 25%;
+}
+
+div.paragraph h1{
+  position: relative;
+  color: #4a4c4e;
+  margin: 15px 0px;
+}
+
+div.paragraph h2 {
+    font-size: 18px;
+    color: #f9bd09;
+}
+
+div.paragraph p {
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  color: black;
+  display: block;
+  font-style: italic;
+  text-indent: 22px;
+  margin-right: 0;
+  text-align: justify;
+  line-height: 35px;
+}
+
+
+/*        &ABOUT       */
+#about {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+#about-photo {
+    background-image: url(/../img/prof.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+
+#greetings {
+    padding: 0 25%;
+    margin: 50px 0;
+    line-height: 45px;
+
+}
+
+div#about-container {
+    padding: 0px 5%;
+    width: 100%;
+    height: 70%;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0px auto 0 auto;
+}
+
+
+div#contact-container {
+    padding: 0px 5%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 50px 0px 0px 0px;
+    border-top: 1px solid #4a4c4e;
+}
+
+div#contact-inner-container {
+    padding: 35px;
+}
+
+
+
+span.contact-icon {
+    margin: 0px 25px;
+    font-size: 20px;
+    position: relative;
+}
+
+span.contact-icon:hover, span.contact-icon:active {
+    color: grey;
+}
+
+/*        &ABOUT       */
+#work {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+div#work-container {
+  padding: 0px 5%;
+  width: 100%;
+  height: 70%;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0px auto 0 auto;
+}
