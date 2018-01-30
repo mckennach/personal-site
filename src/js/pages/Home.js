@@ -19,7 +19,7 @@ export default class Home extends React.Component{
          <div id="about">
 
             <div id="about-container">
-              <h2 id="greetings">Hello, my name is Chris. I am a Front End Developer / Designer living in Denver, CO</h2>
+              <h2 className="page-header" id="greetings">Hello, my name is Chris. I am a Front End Developer / Designer living in Denver, CO</h2>
               <div id="about-photo"></div>
               <Paragraph
                 id="about-inner-container"

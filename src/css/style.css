@@ -52,7 +52,12 @@ a {
 }
 
 
+.page-header{
+    padding: 0 25%;
+    margin: 50px 0;
+    line-height: 45px;
 
+}
 
 
 
@@ -360,12 +365,7 @@ div.paragraph p {
 }
 
 
-#greetings {
-    padding: 0 25%;
-    margin: 50px 0;
-    line-height: 45px;
 
-}
 
 div#about-container {
     padding: 0px 5%;

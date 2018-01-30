@@ -18,10 +18,16 @@ export default class Contact extends React.Component{
                   name='linkedin-square'
                 />
               </a>
-              <a href="https://twitter.com/creeesmckenna" target="_blank">
+              <a href="https://github.com/mckennach" target="_blank">
                 <FontAwesome
                   className='contact-icon'
-                  name='twitter'
+                  name='github'
+                />
+              </a>
+              <a href="https://codepen.io/mckennach/" target="_blank">
+                <FontAwesome
+                  className='contact-icon'
+                  name='codepen'
                 />
               </a>
             </div>

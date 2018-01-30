@@ -59,7 +59,7 @@ export default class App extends React.Component{
   }
 
   isMobile(){
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || this.state.width < 540) {
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || this.state.width < 1000) {
      this.setState({isMobile: true});
    } else {
      this.setState({isMobile: false});

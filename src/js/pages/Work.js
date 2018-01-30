@@ -11,8 +11,8 @@ export default class Work extends React.Component{
       return(
          <div id="work">
             <div id="work-container">
-
-                <WorkComp id={'id'}/>
+                <h2 className="page-header">A list of projects that I have or am currently working on</h2>
+                <WorkComp/>
 
               <Contact />
             </div>
