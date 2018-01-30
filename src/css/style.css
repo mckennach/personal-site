@@ -506,3 +506,9 @@ span.work-card-type {
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
 }
+
+#work-card-2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -50px;
+}

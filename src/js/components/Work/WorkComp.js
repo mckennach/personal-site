@@ -11,19 +11,31 @@ export default class WorkComp extends React.Component{
       this.projects = [
         {
           title: 'Amatis Controls',
-          icon: '../../img/amatis-platforms.png',
+          icon: '../../img/amatis.png',
+          alt: "work-card-1",
           id: 1,
-          type: 'Design / Front End Development'
+          type: 'Design / Front End Development',
+          style: {
+            backgroundColor: 'black'
+          }
         },
         {
           title: 'AML Entertainment',
           icon: '../../img/aml.png',
+          alt: "work-card-2",
           id: 2,
-          type: 'Design / Branding / Front End Developemnt'
+          type: 'Design / Branding / Front End Developemnt',
+          style: {
+            backgroundImage: 'url(./img/redrocks.jpg)',
+            overflow: 'hidden',
+            backgroundSize: 'cover',
+
+          }
         },
         {
           title: 'Charles P. Braman Real Estate Appraisals',
           icon: '',
+          alt: "work-card-3",
           id: 3,
           type: 'Design / Branding / Front End Developemnt'
 
@@ -36,14 +48,14 @@ export default class WorkComp extends React.Component{
 
       const component = this.projects.map((project) =>
 
-        <div className="work-card" key={project.id} id={project.id}>
+        <div style={project.style} className="work-card" key={project.id} id={project.alt}>
           <div className="work-card-img">
             <img className="work-card-icon" src={project.icon} />
           </div>
           <div className="work-card-overlay">
             <span className="work-card-title">{project.title}</span>
             <span className="work-card-type">{project.type}</span>
-            <button>View Project <span className="arrow-right">→</span></button>
+            <button>View Details <span className="arrow-right">→</span></button>
           </div>
 
         </div>
