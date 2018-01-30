@@ -19,14 +19,14 @@ export default class Home extends React.Component{
          <div id="about">
 
             <div id="about-container">
-              <h2 id="greetings">Hello, my name is Chris. I am a Front End Developer / Designer living in Denver, CO</h2>
+              <h2 id="greetings">Hello, my name is Chris. I am a Front End Developer / Designer living in Cleveland, Ohio</h2>
               <div id="about-photo"></div>
               <Paragraph
                 id="about-inner-container"
                 className="paragraph"
                 title={'About Me'}
                 secondTitle={false}
-                text={"I'm currently doing freelance web design/UX design in Denver, Colorado, but am planning to pursue my career as an UX engineer in Chicago, Illinois. Outside of work I am an avid musician and sound designer. Feel free to contact me. Would love to grab a beer and get you know you!"}
+                text={"I'm currently doing freelance web design/UX design in Cleveland, Ohio, but am planning to pursue my career as an Front End Developer in Chicago, Illinois. Outside of work I am an avid musician and sound designer. Feel free to contact me. Would love to grab a beer and get you know you!"}
               />
 
               <Paragraph
