@@ -15,7 +15,7 @@ export default class Work extends React.Component{
                 <h2 className="page-title" id="greetings">Here's a couple of recent projects I have worked on</h2>
                 <WorkComp match={this.props.match}/>
 
-
+                <h1 className="italic">More coming soon!</h1>
             </div>
          </div>
        );

@@ -42,8 +42,8 @@ export default class WorkComp extends React.Component{
             backgroundSize: 'cover',
 
           }
-        },
-        {
+        }
+        /*{
           title: 'Charles P. Braman & Co., Inc.',
           icon: '../../img/cpbco-logo.png',
           path: '/cpbco',
@@ -55,7 +55,7 @@ export default class WorkComp extends React.Component{
           }
 
 
-        },
+        },*/
       ]
   }
 

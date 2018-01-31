@@ -31,13 +31,16 @@ html {
 body {
     border: 8px solid #494C4E;
     margin: 0px;
+    height: 100vh;
+overflow: scroll;
 }
 
 #app, #wrap {
+    height: 100vh;
     box-sizing: border-box;
     color: #4a4c4e;
     background: white;
-    overflow-y: scroll; /* has to be scroll, not auto */
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -358,13 +361,14 @@ nav.mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
 
 
   .page {
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
+      overflow: scroll;
+      height: 83%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
   }
 
 .page-container {
@@ -708,7 +712,7 @@ span.footer-icon:hover, span.footer-icon:active {
     .aml-header-title {font-size: 76px;}
     .aml-sub-header-title {font-size: 24px;}
     div#aml-img {padding: 12px; box-sizing: border-box;}
-
+    div.paragraph {padding: 0;}
 }
 
 /* Landscape */
@@ -736,7 +740,7 @@ span.footer-icon:hover, span.footer-icon:active {
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) {
-
+    div.paragraph {padding: 0;}
 }
 
 /* Landscape */
@@ -764,7 +768,7 @@ span.footer-icon:hover, span.footer-icon:active {
   and (max-device-width: 812px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) {
-
+    div.paragraph {padding: 0;}
 }
 
 /* Landscape */
@@ -773,5 +777,136 @@ span.footer-icon:hover, span.footer-icon:active {
   and (max-device-width: 812px)
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) {
+
+}
+
+
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .page-img{
+      margin: 0;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .page-img{
+      margin: 0;
+    }
+    div.paragraph {padding: 0;}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 834px)
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+  and (min-device-width: 834px)
+  and (max-device-width: 834px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .page-img{margin: 0;}
+    div.paragraph {padding: 0;}
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+  and (min-device-width: 1112px)
+  and (max-device-width: 1112px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .page-img{
+      margin: 0;
+    }
+    div.paragraph {padding: 0;}
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+  and (min-device-width: 1366px)
+  and (max-device-width: 1366px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
 
 }
