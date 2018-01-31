@@ -33,19 +33,22 @@ export default class WorkComp extends React.Component{
           id: 2,
           type: 'Design / Branding / Front End Developemnt',
           style: {
-            backgroundImage: 'url(./img/redrocks.jpg)',
             overflow: 'hidden',
             backgroundSize: 'cover',
 
           }
         },
         {
-          title: 'Charles P. Braman Real Estate Appraisals',
-          icon: '',
+          title: 'Charles P. Braman & Co., Inc.',
+          icon: '../../img/cpbco-logo.png',
           path: '/cpbco',
           alt: "work-card-3",
           id: 3,
-          type: 'Design / Branding / Front End Developemnt'
+          type: 'Design / Branding / Front End Developemnt',
+          style: {
+            
+          }
+
 
         },
       ]

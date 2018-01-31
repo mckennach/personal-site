@@ -354,7 +354,7 @@ nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
 
 
   .page-img {
-      margin-top: 50px;
+      margin: 100px 0px;
       width: 100%;
       height: 100%;
       background-repeat: no-repeat;
@@ -407,7 +407,7 @@ div.paragraph h2 {
 }
 
 div.paragraph p {
-  margin-top: 10px;
+  margin: 10px;
   position: relative;
   z-index: 1;
   font-size: 15px;
@@ -561,9 +561,24 @@ span.work-card-type {
 #work-card-2 {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0px -50px;
+
+    background-image: linear-gradient( rgba(0, 0, 0, 0.73), rgba(0, 0, 0, 0.65) ), url(/../img/redrocks.jpg);
 
 }
+
+#work-card-3 {
+  background: #0d1a29;
+}
+
+
+
+
+#work-card-3 img.work-card-icon{
+width: 700px;
+
+}
+
+
 
 div#amatis-img {
     height: 50%;
@@ -582,5 +597,35 @@ div#amatis2-img {
 }
 
 div#amatis2-img img {
+  width: 65%;
+}
+
+div#aml-img {
+    height: 50%;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.73), rgba(0, 0, 0, 0.65) ), url(/../img/redrocks.jpg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aml-header-title {
+    color: white;
+    font-size: 100px;
+    position: relative;
+    left: 25px;
+    letter-spacing: 60px;
+    font-family: monospace;
+    font-family: 'Righteous', cursive;
+}
+
+.aml-sub-header-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    color: white;
+    letter-spacing: 8px;
+}
+
+div#aml-img img {
   width: 65%;
 }
