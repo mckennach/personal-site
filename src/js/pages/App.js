@@ -19,6 +19,7 @@ import Contact from './Contact';
 
 //Components
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer';
 
 
 export default class App extends React.Component{
@@ -77,20 +78,16 @@ export default class App extends React.Component{
           <Router >
             <div id="app">
               <Header isMobile={this.state.isMobile} title={'CM'}/>
-              <Route exact path='/' render={() => (
-                  <Redirect to="/home"/>
-              )}/>
-              <Route path='/home' component={Home}/>
+
+              <Route exact path='/' component={Home}/>
               <Route path='/work' render={() => (
                 <Work workDetail={this.state.workDetail} match={{ params: { id: 0 }, url: '' }}/>
               )}/>
               <Route path='/amatis' component={WorkDetail1}/>
               <Route path='/aml' component={WorkDetail2}/>
 
-
-
-
-
+              <Route path='/contact' component={Contact}/>
+              <Footer />
             </div>
           </Router>
        );

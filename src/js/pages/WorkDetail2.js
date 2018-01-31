@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Footer from '../components/Footer';
 import Paragraph from '../components/Paragraph';
 
 
@@ -46,7 +45,7 @@ export default class WorkDetail2 extends React.Component{
               secondTitle={'Technology/Languages Used:'}
               text={"HTML, CSS, JavaScript and jQuery."}
             />
-            <Footer />
+        
           </div>
 
          </div>

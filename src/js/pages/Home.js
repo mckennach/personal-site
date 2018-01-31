@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Footer from '../components/Footer';
+
 import Paragraph from '../components/Paragraph';
 
 export default class Home extends React.Component{
@@ -59,7 +59,7 @@ export default class Home extends React.Component{
                 text={"Whether it be helping design the brand or taking an already designed brand, having a beautifully designed website or application can bring the brand to life."}
               />
 
-              <Footer />
+
             </div>
          </div>
        );
