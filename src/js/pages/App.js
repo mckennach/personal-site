@@ -11,12 +11,11 @@ import {
 //Pages
 import Home from './Home';
 import Work from './Work';
+import WorkDetail1 from './WorkDetail1';
+import WorkDetail2 from './WorkDetail2';
 
 //Components
 import Header from '../components/Header/Header';
-
-
-
 
 
 export default class App extends React.Component{
@@ -25,7 +24,8 @@ export default class App extends React.Component{
       this.state = {
         isMobile: false,
         width: window.innerWidth,
-        height: window.innerHeight
+        height: window.innerHeight,
+        workDetail: 'amatis'
       }
     }
 
@@ -69,16 +69,23 @@ export default class App extends React.Component{
 
 
     render() {
-      console.log('hello');
+
       return(
-          <Router>
+          <Router >
             <div id="app">
               <Header isMobile={this.state.isMobile} title={'CM'}/>
               <Route exact path='/' render={() => (
                   <Redirect to="/home"/>
               )}/>
               <Route path='/home' component={Home}/>
-              <Route path='/work' component={Work}/>
+              <Route path='/work' render={() => (
+                <Work workDetail={this.state.workDetail} match={{ params: { id: 0 }, url: '' }}/>
+              )}/>
+              <Route path='/amatis' component={WorkDetail1}/>
+              <Route path='/aml' component={WorkDetail2}/>
+
+
+
 
 
             </div>

@@ -14,7 +14,7 @@ export default class MobileNav extends React.Component {
 
 
   render(){
-    const navItems = ['home', 'work', 'résumé'];
+    const navItems = ['home', 'work', 'contact'];
     var to = ''
     const listItems = navItems.map((item) =>
       <li key={item}>
