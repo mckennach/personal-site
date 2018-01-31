@@ -75,7 +75,7 @@ export default class WorkComp extends React.Component{
 
 
       return(
-          <div>
+          <div className="work-card-container">
             {component}
           </div>
        );

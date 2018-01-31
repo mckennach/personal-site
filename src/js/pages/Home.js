@@ -16,16 +16,17 @@ export default class Home extends React.Component{
         timeOfDay = 'Evening'
       }
       return(
-         <div id="about">
+         <div className="page" id="about">
 
-            <div id="about-container">
-              <h2 id="greetings">Hello, my name is Chris. I am a Front End Developer / Designer living in Cleveland, Ohio</h2>
-              <div id="about-photo"></div>
+            <div className="page-container" id="about-container">
+              <h2 className="page-title" id="greetings">Hello, my name is Chris. I am a Front End Developer / Designer living in Cleveland, Ohio</h2>
+              <div className="page-img" id="about-photo"></div>
               <Paragraph
                 id="about-inner-container"
                 className="paragraph"
                 title={'About Me'}
                 secondTitle={false}
+                paragraphStyle={'italic'}
                 text={"I'm currently doing freelance web design/UX design in Cleveland, Ohio, but am planning to pursue my career as an Front End Developer in Chicago, Illinois. Outside of work I am an avid musician and sound designer. Feel free to contact me. Would love to grab a beer and get you know you!"}
               />
 
@@ -34,6 +35,7 @@ export default class Home extends React.Component{
                 className="paragraph"
                 title={'Skills'}
                 secondTitle={'Front End Development'}
+                paragraphStyle={'italic'}
                 text={"Front End Development is building the user interface of a website or application. Tools such as HTML, CSS and the many different available Javascript frameworks allow me to be build fast, interactive and cross-platform websites/applications."}
               />
 
@@ -42,6 +44,7 @@ export default class Home extends React.Component{
                 className="paragraph"
                 title={false}
                 secondTitle={'UX/UI Design'}
+                paragraphStyle={'italic'}
                 text={"UI/UX involves planning and structuring a site's layout. Once the proper information architecture is in place, I design the visual layer to create a beautiful user experience."}
               />
 
@@ -50,6 +53,7 @@ export default class Home extends React.Component{
                 className="paragraph"
                 title={false}
                 secondTitle={'Brand identity'}
+                paragraphStyle={'italic'}
                 text={"Whether it be helping design the brand or taking an already designed brand, having a beautifully designed website or application can bring the brand to life."}
               />
 
