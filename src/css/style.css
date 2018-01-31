@@ -106,8 +106,18 @@ header#app-header h1 {
     position: relative;
     border: 3px solid #4a4c4e;
     padding: 10px;
-    border-radius: 7px;
+    border-radius: 0px;
     justify-content: stretch;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+header#app-header h1:hover {
+
+    border-radius: 10px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+
 }
 /*        &NAV       */
 
@@ -380,7 +390,7 @@ nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
 
 div.paragraph {
   box-sizing: border-box;
-  padding: 45px 20% 0px 20%;
+  padding: 39px 20% 0px 20%;
 }
 
 div.paragraph h1{
@@ -552,11 +562,12 @@ span.work-card-type {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0px -50px;
+
 }
 
 div#amatis-img {
     height: 50%;
-    background: #0000000a;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -564,12 +575,12 @@ div#amatis-img {
 
 div#amatis2-img {
     height: 70%;
-    background: #0000000a;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 div#amatis2-img img {
-  width: 55%;
+  width: 65%;
 }
