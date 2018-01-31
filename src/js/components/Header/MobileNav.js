@@ -14,34 +14,51 @@ export default class MobileNav extends React.Component {
   toggleNav(event){
     const navButton = document.getElementById('nav-icon');
     const navOverlay = document.getElementById('nav-list');
+    const app = document.getElementById('app');
     navButton.classList.toggle("open");
     navOverlay.classList.toggle("open");
+    app.classList.toggle("open");
 
   }
 
   render(){
-    const navItems = ['about', 'work', 'résumé'];
+    const navItems = [
+      {
+        name: 'home',
+        path: '/'
+      },
+      {
+        name: 'work',
+        path: 'work'
+      },
+      {
+        name: 'contact',
+        path: 'contact'
+      }
+    ];
     const listItems = navItems.map((item) =>
-      <li key={item}>
+      <li key={item.name}>
         <NavLink
-          to={item}
-          activeClassName="active-nav"
-        >{item}</NavLink>
+          to={item.path}
+
+        >{item.name}</NavLink>
       </li>
     );
 
     return (
-      <div id='mobile-nav-container'>
-        <div onClick={this.toggleNav.bind(this)} id="nav-icon">
+      <div className='mobile-nav-container'>
+        <div onClick={this.toggleNav.bind(this)} id="nav-icon" className="nav-icon">
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <nav id="mobile-nav-list">
-          <ul>{listItems}</ul>
-        </nav>
+        <div id="nav-list" className="mobile-nav-panel">
+          <nav className="mobile-nav-list">
 
+            <ul>{listItems}</ul>
+          </nav>
+        </div>
 
 
 

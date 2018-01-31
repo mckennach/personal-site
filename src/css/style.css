@@ -34,7 +34,6 @@ body {
 }
 
 #app, #wrap {
-
     box-sizing: border-box;
     color: #4a4c4e;
     background: white;
@@ -42,6 +41,20 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+#app {
+  position: relative;
+  right: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#app.open
+{
+  right: 50%;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+
+}
 
 
 a {
@@ -180,39 +193,55 @@ img#logo {
 /*        &MOBILE NAV        */
 
 
-#mobile-nav-container {
+.mobile-nav-panel {
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    right: -50%;
+    top: 0;
+    background: white;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+}
+
+.mobile-nav-panel.open {
+  right: 0%;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.mobile-nav-container {
     margin: auto 0;
 }
 
-nav#mobile-nav-list {
-    position: absolute;
-    left: 0;
+nav.mobile-nav-list {
+    /* position: fixed; */
+    /* right: 0; */
     top: 0;
-    background: rgba(0, 0, 0, .75);
-    width: 100vw;
+    /* background: white; */
+    width: 100%;
     height: 100vh;
-    z-index: 0;
-    display: none;
+    z-index: 5;
 }
 
-nav#mobile-nav-list.open {
+nav.mobile-nav-list.open {
     display: flex;
     justify-content: center;
 }
 
-nav#mobile-nav-list ul {
+nav.mobile-nav-list ul {
   list-style: none;
-  text-align: center;
 }
 
-nav#mobile-nav-list ul li {
-  font-size: 15vw;
-  margin-top: 100px;
+nav.mobile-nav-list ul li {
+  font-size: 30px;
+  margin: 100px 0px 0px 25px;;
 }
 
 
 
-nav#mobile-nav-list ul li a:before {
+nav.mobile-nav-list ul li a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -227,7 +256,7 @@ nav#mobile-nav-list ul li a:before {
     transition: all 0.3s ease-in-out 0s;
 }
 
-nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
+nav.mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
@@ -236,7 +265,7 @@ nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
     /*    &NAV ICON       */
 
 
-    #nav-icon {
+    .nav-icon {
         width: 44px;
         height: 24px;
         position: relative;
@@ -253,7 +282,7 @@ nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
         z-index: 99;
     }
 
-    #nav-icon span {
+    .nav-icon span {
       display: block;
       position: absolute;
       height: 3px;
@@ -274,7 +303,7 @@ nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
 
 
 
-    #nav-icon span:nth-child(1) {
+    .nav-icon span:nth-child(1) {
         top: 0px;
         -webkit-transform-origin: left center;
         -moz-transform-origin: left center;
@@ -282,7 +311,7 @@ nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
         transform-origin: left center;
     }
 
-    #nav-icon span:nth-child(2) {
+    .nav-icon span:nth-child(2) {
         top: 10px;
         -webkit-transform-origin: left center;
         -moz-transform-origin: left center;
@@ -290,7 +319,7 @@ nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
         transform-origin: left center;
     }
 
-    #nav-icon span:nth-child(3) {
+    .nav-icon span:nth-child(3) {
         top: 20px;
         -webkit-transform-origin: left center;
         -moz-transform-origin: left center;
@@ -298,7 +327,7 @@ nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
         transform-origin: left center;
     }
 
-    #nav-icon.open span:nth-child(1) {
+    .nav-icon.open span:nth-child(1) {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
@@ -308,12 +337,12 @@ nav#mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
       width: 35px;
   }
 
-    #nav-icon.open span:nth-child(2) {
+    .nav-icon.open span:nth-child(2) {
       width: 0%;
       opacity: 0;
     }
 
-    #nav-icon.open span:nth-child(3) {
+    .nav-icon.open span:nth-child(3) {
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
