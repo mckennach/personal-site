@@ -14,6 +14,9 @@ import Work from './Work';
 import WorkDetail1 from './WorkDetail1';
 import WorkDetail2 from './WorkDetail2';
 
+
+import Contact from './Contact';
+
 //Components
 import Header from '../components/Header/Header';
 
