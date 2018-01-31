@@ -18,32 +18,11 @@ export default class MobileNav extends React.Component {
     navButton.classList.toggle("open");
     navOverlay.classList.toggle("open");
     app.classList.toggle("open");
-
   }
 
   render(){
-    const navItems = [
-      {
-        name: 'home',
-        path: '/'
-      },
-      {
-        name: 'work',
-        path: 'work'
-      },
-      {
-        name: 'contact',
-        path: 'contact'
-      }
-    ];
-    const listItems = navItems.map((item) =>
-      <li key={item.name}>
-        <NavLink
-          to={item.path}
 
-        >{item.name}</NavLink>
-      </li>
-    );
+
 
     return (
       <div className='mobile-nav-container'>

@@ -45,7 +45,7 @@ export default class WorkDetail2 extends React.Component{
               secondTitle={'Technology/Languages Used:'}
               text={"HTML, CSS, JavaScript and jQuery."}
             />
-        
+
           </div>
 
          </div>

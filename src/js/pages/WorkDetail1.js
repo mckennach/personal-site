@@ -6,13 +6,12 @@ import Paragraph from '../components/Paragraph';
 
 export default class WorkDetail1 extends React.Component{
     render() {
-      var app = document.getElementById('app');
-      app.scrollTo(0, 0);
+    
       return(
          <div className="page" id="amatis">
           <div className="page-container" id="amatis-container">
             <div id="amatis-img" className="page-img">
-              <img src="../../img/amatis.png"/>
+              <img className="amatis-page-image" src="../../img/amatis.png"/>
             </div>
             <Paragraph
 
@@ -51,7 +50,7 @@ export default class WorkDetail1 extends React.Component{
               secondTitle={'Technology/Languages Used:'}
               text={"HTML, CSS, JavaScript, jQuery, XCode, Cordova and (some) PHP."}
             />
-            
+
           </div>
 
          </div>
