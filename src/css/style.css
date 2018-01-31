@@ -50,7 +50,7 @@ body {
 
 #app.open
 {
-  right: 50%;
+  right: 30%;
   -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 
@@ -163,7 +163,7 @@ nav#nav-list ul li {
 }
 
 
-nav#nav-list ul li a:before, .active-nav {
+nav#nav-list ul li a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -178,10 +178,10 @@ nav#nav-list ul li a:before, .active-nav {
     transition: all 0.3s ease-in-out 0s;
 }
 
-nav#nav-list ul li a:hover:before, nav#nav-list ul li a:active:before, .active-nav {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+nav#nav-list ul li a:hover:before, .active:before{
+  visibility: visible !important;
+  -webkit-transform: scaleX(1) !important;
+  transform: scaleX(1) !important;
 }
 
 img#logo {
@@ -194,15 +194,15 @@ img#logo {
 
 
 .mobile-nav-panel {
-    width: 50%;
+    width: 30%;
     height: 100%;
     position: fixed;
     z-index: 99;
-    right: -50%;
+    right: -30%;
     top: 0;
-    background: white;
+    background: #494c4e;
     -webkit-transition: all 0.3s ease-in-out 0s;
-      transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 .mobile-nav-panel.open {
@@ -236,9 +236,12 @@ nav.mobile-nav-list ul {
 
 nav.mobile-nav-list ul li {
   font-size: 30px;
-  margin: 100px 0px 0px 25px;;
+  margin: 100px 0px 0px 25px;
 }
 
+nav.mobile-nav-list ul li a{
+  color: white;
+}
 
 
 nav.mobile-nav-list ul li a:before {
@@ -248,7 +251,7 @@ nav.mobile-nav-list ul li a:before {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: #f9bd09;
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);

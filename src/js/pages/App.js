@@ -67,6 +67,9 @@ export default class App extends React.Component{
      this.setState({isMobile: true});
    } else {
      this.setState({isMobile: false});
+
+     const app = document.getElementById('app');
+     app.classList.remove("open");
    }
   }
 
@@ -77,8 +80,9 @@ export default class App extends React.Component{
       return(
           <Router >
             <div id="app">
-              <Header isMobile={this.state.isMobile} title={'CM'}/>
 
+              <Header isMobile={this.state.isMobile} title={'CM'}/>
+              <div className="page-overlay"></div>
               <Route exact path='/' component={Home}/>
               <Route path='/work' render={() => (
                 <Work workDetail={this.state.workDetail} match={{ params: { id: 0 }, url: '' }}/>
