@@ -20,7 +20,8 @@ export default class Title extends React.Component {
       <div className={this.props.className} id={this.props.id}>
         <h1>{title}</h1>
         <h2>{secondTitle}</h2>
-        <p>{this.props.text}</p>
+        <p className={this.props.paragraphStyle}>{this.props.text}</p>
+
       </div>
     );
   }
