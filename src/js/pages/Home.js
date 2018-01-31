@@ -18,9 +18,15 @@ export default class Home extends React.Component{
       return(
          <div className="page" id="about">
 
+<<<<<<< HEAD
             <div className="page-container" id="about-container">
               <h2 className="page-title" id="greetings">Hello, my name is Chris. I am a Front End Developer / Designer living in Cleveland, Ohio</h2>
               <div className="page-img" id="about-photo"></div>
+=======
+            <div id="about-container">
+              <h2 className="page-header" id="greetings">Hello, my name is Chris. I am a Front End Developer / Designer living in Denver, CO</h2>
+              <div id="about-photo"></div>
+>>>>>>> develop
               <Paragraph
                 id="about-inner-container"
                 className="paragraph"
