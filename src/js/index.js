@@ -4,4 +4,4 @@ import App from './pages/App';
 
 import styles from '../css/style.css';
 
-ReactDOM.render(<App />, document.getElementById('wrap'));
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -52,17 +52,6 @@ export default class MobileNav extends React.Component {
           <span></span>
           <span></span>
         </div>
-
-        <div id="nav-list" className="mobile-nav-panel">
-          <nav className="mobile-nav-list">
-
-            <ul>{listItems}</ul>
-          </nav>
-        </div>
-
-
-
-
       </div>
     );
   }

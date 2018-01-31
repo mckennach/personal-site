@@ -50,7 +50,7 @@ body {
 
 #app.open
 {
-  right: 30%;
+  right: 35%;
   -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 
@@ -194,11 +194,11 @@ img#logo {
 
 
 .mobile-nav-panel {
-    width: 30%;
+    width: 35%;
     height: 100%;
     position: fixed;
     z-index: 99;
-    right: -30%;
+    right: -35%;
     top: 0;
     background: #494c4e;
     -webkit-transition: all 0.3s ease-in-out 0s;

@@ -19,6 +19,7 @@ import Contact from './Contact';
 
 //Components
 import Header from '../components/Header/Header';
+import NavPanel from '../components/Header/NavPanel';
 import Footer from '../components/Footer';
 
 
@@ -69,7 +70,9 @@ export default class App extends React.Component{
      this.setState({isMobile: false});
 
      const app = document.getElementById('app');
+     const navPanel = document.getElementById('nav-list');
      app.classList.remove("open");
+     navPanel.classList.remove("open");
    }
   }
 
@@ -78,20 +81,22 @@ export default class App extends React.Component{
     render() {
 
       return(
-          <Router >
-            <div id="app">
+          <Router>
+            <div id="wrap">
+              <NavPanel />
+              <div id="app">
+                <Header isMobile={this.state.isMobile} title={'CM'}/>
+                <div className="page-overlay"></div>
+                <Route exact path='/' component={Home}/>
+                <Route path='/work' render={() => (
+                  <Work workDetail={this.state.workDetail} match={{ params: { id: 0 }, url: '' }}/>
+                )}/>
+                <Route path='/amatis' component={WorkDetail1}/>
+                <Route path='/aml' component={WorkDetail2}/>
 
-              <Header isMobile={this.state.isMobile} title={'CM'}/>
-              <div className="page-overlay"></div>
-              <Route exact path='/' component={Home}/>
-              <Route path='/work' render={() => (
-                <Work workDetail={this.state.workDetail} match={{ params: { id: 0 }, url: '' }}/>
-              )}/>
-              <Route path='/amatis' component={WorkDetail1}/>
-              <Route path='/aml' component={WorkDetail2}/>
-
-              <Route path='/contact' component={Contact}/>
-              <Footer />
+                <Route path='/contact' component={Contact}/>
+                <Footer />
+              </div>
             </div>
           </Router>
        );
