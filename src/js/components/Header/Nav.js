@@ -14,15 +14,30 @@ export default class MobileNav extends React.Component {
 
 
   render(){
-    const navItems = ['home', 'work', 'contact'];
+    const navItems = [
+      {
+        name: 'home',
+        path: '/'
+      },
+      {
+        name: 'work',
+        path: 'work'
+      },
+      {
+        name: 'contact',
+        path: 'contact'
+      }
+    ];
     var to = ''
+
     const listItems = navItems.map((item) =>
-      <li key={item}>
+    (
+      <li key={item.name}>
         <NavLink
-          to={item}
-        >{item}</NavLink>
+          to={item.path}
+        >{item.name}</NavLink>
       </li>
-    );
+    ));
 
     return (
       <div id='main-nav-container'>
