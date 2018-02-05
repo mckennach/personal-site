@@ -14,11 +14,14 @@ export default class Header extends React.Component {
 
   render(){
     var nav;
+    console.log(this.props);
     if(this.props.isMobile){
-      nav = <MobileNav />
+      nav = <MobileNav toggleNav={this.props.toggleNav.bind(this)} navToggled={this.props.navToggled} scrolled={this.props.scrolled} />
     } else {
       nav = <Nav />
     }
+
+
 
 
     return (

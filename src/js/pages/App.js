@@ -30,7 +30,9 @@ export default class App extends React.Component{
         isMobile: false,
         width: window.innerWidth,
         height: window.innerHeight,
-        workDetail: 'amatis'
+        workDetail: 'amatis',
+        scrolled: false,
+        navToggled: false
       }
     }
 
@@ -46,6 +48,21 @@ export default class App extends React.Component{
       this.setState({ width: update_width, height: update_height });
     }
     this.isMobile();
+
+
+
+  }
+
+  updatedScrollState(){
+    if(window.scrollY > 5){
+      this.setState({scrolled: true});
+    } else {
+      this.setState({scrolled: false});
+    }
+  }
+
+  toggleNav(toggled) {
+      this.setState({toggled});
   }
 
   /**
@@ -54,6 +71,7 @@ export default class App extends React.Component{
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions.bind(this));
+    window.addEventListener("scroll", this.updatedScrollState.bind(this));
   }
 
   /**
@@ -61,6 +79,7 @@ export default class App extends React.Component{
    */
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions.bind(this));
+    window.addEventListener("scroll", this.updatedScrollState.bind(this));
   }
 
   isMobile(){
@@ -85,7 +104,7 @@ export default class App extends React.Component{
             <div id="wrap">
               <NavPanel />
               <div id="app">
-                <Header isMobile={this.state.isMobile} title={'CM'}/>
+                <Header scrolled={this.state.scrolled} toggleNav={this.toggleNav.bind(this)} navToggled={this.state.navToggled} isMobile={this.state.isMobile} title={'CM'}/>
                 <div className="page-overlay"></div>
                 <Route exact path='/' component={Home}/>
                 <Route path='/work' render={() => (

@@ -7,26 +7,48 @@ import {
 
 
 export default class MobileNav extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    this.state = {
+      toggleNav: this.props.toggleNav.bind(this),
+      navToggled: this.props.navToggled,
+      scrolled: false,
+      mobileNavClass: 'mobile-nav-container'
+
+    }
+
+
   }
 
+
   toggleNav(event){
-    const navButton = document.getElementById('nav-icon');
-    const navOverlay = document.getElementById('nav-list');
-    const app = document.getElementById('app');
-    navButton.classList.toggle("open");
-    navOverlay.classList.toggle("open");
-    app.classList.toggle("open");
+    console.log(this.props);
+    console.log(this.state.navToggled)
+
+    if(this.state.navToggled){
+      this.props.toggleNav(false);
+    } else {
+      this.props.toggleNav(true);
+    }
   }
+
+  componentWillReceiveProps(nextProps) {
+
+    if (nextProps.scrolled) {
+      this.setState({scrolled: true});
+    } else {
+      this.setState({scrolled: false});
+    }
+  }
+
 
   render(){
 
-
+    console.log(this.props)
 
     return (
-      <div className='mobile-nav-container'>
-        <div onClick={this.toggleNav.bind(this)} id="nav-icon" className="nav-icon">
+      <div id="mobile-nav-container" className={this.state.mobileNavClass}>
+        <div onClick={this.state.toggleNav} id="nav-icon" className="nav-icon">
           <span></span>
           <span></span>
           <span></span>

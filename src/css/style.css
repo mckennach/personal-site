@@ -31,12 +31,12 @@ html {
 body {
     border: 8px solid #494C4E;
     margin: 0px;
-    height: 100vh;
-overflow: scroll;
+    height: auto;
+    overflow: scroll;
 }
 
 #app, #wrap {
-    height: 100vh;
+    height: auto;
     box-sizing: border-box;
     color: #4a4c4e;
     background: white;
@@ -114,8 +114,8 @@ header#app-header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    /* position: absolute; */
-    background: white;
+    position: relative;
+    /* background: white; */
     z-index: 50;
     padding: 10px 5%;
     box-sizing: border-box;
@@ -215,8 +215,32 @@ img#logo {
 }
 
 .mobile-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto 0;
+    position: fixed;
+    right: 8%;
+    top: 42px;
+    width: 65px;
+    height: 65px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
+
+.mobile-nav-container.scrolled {
+    background: #fbcf5e;
+    box-shadow: 0px 0px 2px #0000004a;
+    /* width: 65px; */
+    /* height: 65px; */
+    border-radius: 100px;
+}
+.mobile-nav-container.open  {
+  right: 39%;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
 
 nav.mobile-nav-list {
     /* position: fixed; */
@@ -272,7 +296,7 @@ nav.mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
 
 
     .nav-icon {
-        width: 44px;
+            width: 30px;
         height: 24px;
         position: relative;
         -webkit-transform: rotate(0deg);
@@ -284,7 +308,7 @@ nav.mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
         -o-transition: .5s ease-in-out;
         transition: .5s ease-in-out;
         cursor: pointer;
-        top: 8px;
+        top: 0px;
         z-index: 99;
     }
 
@@ -333,36 +357,36 @@ nav.mobile-nav-list ul li a:hover:before, nav#nav-list ul li a:active:before {
         transform-origin: left center;
     }
 
-    .nav-icon.open span:nth-child(1) {
+    .mobile-nav-container.open .nav-icon span:nth-child(1) {
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       transform: rotate(45deg);
-      top: -5px;
-      left: 0px;
+      top: -2px;
+      left: 4px;
       width: 35px;
   }
 
-    .nav-icon.open span:nth-child(2) {
+    .mobile-nav-container.open .nav-icon span:nth-child(2) {
       width: 0%;
       opacity: 0;
     }
 
-    .nav-icon.open span:nth-child(3) {
+    .mobile-nav-container.open .nav-icon span:nth-child(3) {
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg);
-      top: 20px;
-      left: 0px;
+      top: 23px;
+      left: 4px;
       width: 35px;
   }
 
 
 
   .page {
-      overflow: scroll;
-      height: 83%;
+
+      height: auto;
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
@@ -694,7 +718,7 @@ span.footer-icon:hover, span.footer-icon:active {
   and (orientation: portrait) {
 
     #app.open {right: 60%;}
-
+    .mobile-nav-container.open {right: 60%;}
     .mobile-nav-panel {width: 60%; right: -60%;}
 
     div.paragraph,
