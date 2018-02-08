@@ -7,16 +7,21 @@ import Nav from './Nav'
 import Logo from './Logo'
 
 
+
+
+
+
+
 export default class Header extends React.Component {
   constructor(){
     super();
   }
 
   render(){
-    var nav;
     console.log(this.props);
+    var nav;
     if(this.props.isMobile){
-      nav = <MobileNav toggleNav={this.props.toggleNav.bind(this)} navToggled={this.props.navToggled} scrolled={this.props.scrolled} />
+      nav = <MobileNav  navToggled={this.props.navToggled} scrolled={this.props.scrolled} />
     } else {
       nav = <Nav />
     }

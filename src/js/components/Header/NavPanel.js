@@ -13,12 +13,14 @@ export default class NavPanel extends React.Component {
   }
 
   toggleNav(event){
-    const navButton = document.getElementById('nav-icon');
-    const navOverlay = document.getElementById('nav-list');
-    const app = document.getElementById('app');
-    navButton.classList.toggle("open");
-    navOverlay.classList.toggle("open");
-    app.classList.toggle("open");
+    const nav = document.getElementById('mobile-nav-container').classList;
+    const app = document.getElementById('app').classList;
+    const list = document.getElementById('nav-list').classList;
+    console.log(nav);
+
+    nav.toggle('open');
+    app.toggle('open');
+    list.toggle('open');
   }
 
 

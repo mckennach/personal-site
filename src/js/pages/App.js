@@ -32,7 +32,6 @@ export default class App extends React.Component{
         height: window.innerHeight,
         workDetail: 'amatis',
         scrolled: false,
-        navToggled: false
       }
     }
 
@@ -62,7 +61,7 @@ export default class App extends React.Component{
   }
 
   toggleNav(toggled) {
-      this.setState({toggled});
+
   }
 
   /**
@@ -104,7 +103,7 @@ export default class App extends React.Component{
             <div id="wrap">
               <NavPanel />
               <div id="app">
-                <Header scrolled={this.state.scrolled} toggleNav={this.toggleNav.bind(this)} navToggled={this.state.navToggled} isMobile={this.state.isMobile} title={'CM'}/>
+                <Route render={(props) => <Header {...props} scrolled={this.state.scrolled}  navToggled={this.state.navToggled} isMobile={this.state.isMobile} title={'CM'}/>} />
                 <div className="page-overlay"></div>
                 <Route exact path='/' component={Home}/>
                 <Route path='/work' render={() => (
